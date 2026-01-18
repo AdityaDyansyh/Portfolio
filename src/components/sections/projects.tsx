@@ -21,7 +21,7 @@ import SectionWrapper from "../ui/section-wrapper";
 const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects" className="max-w-7xl mx-auto md:h-[130vh]">
-      <SectionHeader id='projects' title="Projects" />
+      <SectionHeader id='projects' title="Certifications" />
       <div className="grid grid-cols-1 md:grid-cols-3">
         {projects.map((project, index) => (
           <Modall key={project.src} project={project} />
@@ -46,9 +46,16 @@ const Modall = ({ project }: { project: Project }) => {
               width={300}
               height={300}
             />
+
+            {/* Overlay */}
             <div className="absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black via-black/85 to-transparent pointer-events-none">
               <div className="flex flex-col h-full items-start justify-end p-6">
-                <div className="text-lg text-left">{project.title}</div>
+                
+                {/* FIX: title warna putih */}
+                <div className="text-lg text-left text-white drop-shadow-md">
+                  {project.title}
+                </div>
+
                 <div className="text-xs bg-white text-black rounded-lg w-fit px-2">
                   {project.category}
                 </div>
@@ -56,27 +63,25 @@ const Modall = ({ project }: { project: Project }) => {
             </div>
           </div>
         </ModalTrigger>
+
         <ModalBody className="md:max-w-4xl md:max-h-[80%] overflow-auto">
           <SmoothScroll isInsideModal={true}>
             <ModalContent>
               <ProjectContents project={project} />
             </ModalContent>
           </SmoothScroll>
+
           <ModalFooter className="gap-4">
             <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
-              Cancel
+              Close
             </button>
-            <Link href={project.live} target="_blank">
-              <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-                Visit
-              </button>
-            </Link>
           </ModalFooter>
         </ModalBody>
       </Modal>
     </div>
   );
 };
+
 export default ProjectsSection;
 
 const ProjectContents = ({ project }: { project: Project }) => {
@@ -88,7 +93,7 @@ const ProjectContents = ({ project }: { project: Project }) => {
       <div className="flex flex-col md:flex-row md:justify-evenly max-w-screen overflow-hidden md:overflow-visible">
         <div className="flex flex-row md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
           <p className="text-sm mt-1 text-neutral-600 dark:text-neutral-500">
-            Frontend
+            ---------------
           </p>
           {project.skills.frontend?.length > 0 && (
             <FloatingDock items={project.skills.frontend} />
@@ -97,7 +102,7 @@ const ProjectContents = ({ project }: { project: Project }) => {
         {project.skills.backend?.length > 0 && (
           <div className="flex flex-row md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
             <p className="text-sm mt-1 text-neutral-600 dark:text-neutral-500">
-              Backend
+              
             </p>
             <FloatingDock items={project.skills.backend} />
           </div>

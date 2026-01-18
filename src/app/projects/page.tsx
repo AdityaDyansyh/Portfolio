@@ -11,60 +11,42 @@ import "@splidejs/react-splide/css";
 const PROJECTS = [
   {
     id: 1,
-    name: "Coding Ducks",
-    description: `Dive into CodingDucks, a fusion of CodePen's creative playground with LeetCode's problem-solving realm.
-Whether you're a newbie or a seasoned coder, join the community to paddle through coding adventures and let your
-creativity soar.`,
-    link: "https://www.codingducks.live",
-    images: [
-      "/assets/projects-screenshots/codingducks/1.png",
-      "/assets/projects-screenshots/codingducks/2.png",
-      "/assets/projects-screenshots/codingducks/3.png",
-      "/assets/projects-screenshots/codingducks/4.png",
-      "/assets/projects-screenshots/codingducks/5.png",
-    ],
+    name: "C++ Programming Course - Saylor Academy",
+    description: `C++ Programming at Saylor Academy is your foundation for mastering
+  high-performance code — where you sharpen logic, manage memory with
+  precision, and build efficient systems like a true software engineer.
+  Strengthen your fundamentals, write optimized code, and level up your
+  problem-solving mindset.`,
+    link: "",
+    images: [],
   },
   {
     id: 2,
-    name: "Ghost Chat",
-    description: `GhostChat is an anonymous messaging app that allows users to connect without revealing their identities. 
-Join the community for intriguing conversations and mysterious encounters.`,
-    link: "https://ghostchatt.vercel.app/",
-    images: [
-      "/assets/projects-screenshots/ghostchat/1.png",
-      "/assets/projects-screenshots/ghostchat/2.png",
-      "/assets/projects-screenshots/ghostchat/3.png",
-      "/assets/projects-screenshots/ghostchat/4.png",
-    ],
+    name: "HubSpot Revenue Operations",
+    description: `HubSpot Revenue Operations (RevOps) helps align marketing, sales, and customer service into one unified system to drive predictable growth. By centralizing data, automating processes, and providing real-time insights, RevOps enables teams to work more efficiently, improve customer experience, and maximize revenue across the entire customer lifecycle.`,
+    link: "",
+    images: [],
   },
   {
     id: 3,
-    name: "Coupon Luxury",
-    description: `Welcome to CouponLuxury, your destination for exclusive discounts and savings. Explore the platform to find the
-best deals on luxury brands and products. Join our savvy community of shoppers and unlock access to premium coupons.`,
-    link: "https://www.couponluxury.com/",
-    images: [
-      "/assets/projects-screenshots/couponluxury/1.png",
-      "/assets/projects-screenshots/couponluxury/2.png",
-      "/assets/projects-screenshots/couponluxury/3.png",
-      "/assets/projects-screenshots/couponluxury/4.png",
-      "/assets/projects-screenshots/couponluxury/5.png",
-    ],
+    name: "Prinsip Pemrograman SOLID - Dicoding",
+    description: `The SOLID Programming Principles are five fundamental principles in object-oriented programming designed to make code easier to understand, maintain, and extend. These principles include the Single Responsibility Principle (SRP), the Open/Closed Principle (OCP), the Liskov Substitution Principle (LSP), the Interface Segregation Principle (ISP), and the Dependency Inversion Principle (DIP). Adhering to these principles helps developers create robust and flexible software systems that can adapt to changing requirements over time.`,
+    link: "",
+    images: [],
   },
   {
     id: 4,
-    name: "JNTUA Results Analyser",
-    description: `the go-to app for JNTUA students, empowering them to analyze, compare, and view classwise results effortlessly.
-     Dive into your academic journey with ease, track your progress, and gain valuable insights.`,
-    link: "/projects/4",
-    images: ["/assets/projects-screenshots/jra/1.png"],
+    name: "Dasar Manajemen Proyek - Dicoding",
+    description: `Project Management Fundamentals is a course that provides a fundamental understanding of project management, including the planning, execution, and monitoring stages of a project. The material covers managing time, budget, risk, and team communication to ensure the successful completion of a project on time. This course is ideal for individuals looking to enhance their project management skills and effectively lead projects in various industries.`,
+    link: "",
+    images: [],
   },
 ];
 function Page() {
   return (
     <>
       <div className="container mx-auto md:px-[50px] xl:px-[150px] text-zinc-300 h-full">
-        <h1 className="text-4xl mt-[100px] mb-[50px]">Projects</h1>
+        <h1 className="text-4xl mt-[100px] mb-[50px]">Certifications</h1>
         <ul className="grid  md:grid-cols-2 lg:grid-cols-3 gap-10 place-content-around ">
           {PROJECTS.map((project) => (
             <li
