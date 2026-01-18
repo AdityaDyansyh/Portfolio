@@ -5,7 +5,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 
 const LINKS = [
-  { name: "Certifications", href: "/certifications" },
+  { name: "Certifications", href: "/projects" },
   { name: "Contact", href: "/contact" },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
