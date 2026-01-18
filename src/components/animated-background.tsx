@@ -143,8 +143,8 @@ const AnimatedBackground = () => {
 
     // Section transitions
     createSectionTimeline("#skills", "skills", "hero");
-    createSectionTimeline("#projects", "projects", "skills", "top 70%");
-    createSectionTimeline("#contact", "contact", "projects", "top 30%");
+    createSectionTimeline("#certifications", "certifications", "skills", "top 70%");
+    createSectionTimeline("#contact", "contact", "certifications", "top 30%");
   };
 
   const getBongoAnimation = () => {
@@ -388,7 +388,7 @@ const AnimatedBackground = () => {
       }
 
       // Handle Bongo Cat
-      if (activeSection === "projects") {
+      if (activeSection === "certifications") {
         await sleep(300);
         bongoAnimationRef.current?.start();
       } else {

@@ -18,7 +18,7 @@ const links: Link[] = [
   },
   {
     title: 'Certifications',
-    href: '/#projects',
+    href: '/#certifications',
     thumbnail: '/assets/nav-link-previews/certifications.png'
   },
   // {
