@@ -287,11 +287,13 @@ function Page() {
           >
             <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
             <p className="mb-10 text-roboto">
-              Hey there! I&apos;m Aditya, a Fullstack developer passionate about
-              creating meaningful digital experiences. With great in Web
-              development, I thrive on turning ideas into reality through coding
-              and design. My journey began with a fascination for technology and
-              a drive to make a positive impact.
+              Hey there! I&apos;m Aditya, a passionate Full Stack Developer with strong expertise in modern web technologies and C++ systems programming. 
+              With 2+ years of experience, I specialize in building scalable web applications using Next.js, 
+              TypeScript, and cloud infrastructure, while also diving deep into high-performance C++ applications.
+            </p>
+            <p className="mb-10">
+              My approach combines clean code architecture with performance optimization, whether I'm developing user-friendly interfaces or efficient backend systems. 
+              I thrive in solving complex problems and continuously learning new technologies to deliver robust solutions.
             </p>
             <p className="mb-10">
               When I&apos;m not coding, you can find me [Your
