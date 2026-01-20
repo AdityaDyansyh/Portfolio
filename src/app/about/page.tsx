@@ -243,9 +243,9 @@ function Page() {
             }}
           >
             <div className="flex flex-row lg:flex-col items-center">
-              <div className="flex justify-center items-center lg:w-full lg:aspect-square bg-zinc-800 rounded-xl lg:mb-5">
+              <div className="flex justify-center items-center lg:w-full bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-2xl lg:mb-5 p-6 lg:p-8">
                 <img
-                  className="rounded-full p-4 lg:p-10 w-[100px] md:w-[150px] lg:w-[200px] aspect-square  bg-zinc-800"
+                  className="rounded-full w-[140px] md:w-[170px] lg:w-[210px] aspect-square object-cover border-4 border-white/10 shadow-2xl"
                   alt="me"
                   src="/assets/me.jpg"
                 />
@@ -287,12 +287,12 @@ function Page() {
           >
             <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
             <p className="mb-10 text-roboto">
-              Hey there! I&apos;m Aditya, a passionate Full Stack Developer with strong expertise in modern web technologies and C++ systems programming. 
-              With 2+ years of experience, I specialize in building scalable web applications using Next.js, 
+              Hey there! I&apos;m Aditya, a passionate Full Stack Developer with strong expertise in modern web technologies and C++ systems programming.
+              With 2+ years of experience, I specialize in building scalable web applications using Next.js,
               TypeScript, and cloud infrastructure, while also diving deep into high-performance C++ applications.
             </p>
             <p className="mb-10">
-              My approach combines clean code architecture with performance optimization, whether I'm developing user-friendly interfaces or efficient backend systems. 
+              My approach combines clean code architecture with performance optimization, whether I'm developing user-friendly interfaces or efficient backend systems.
               I thrive in solving complex problems and continuously learning new technologies to deliver robust solutions.
             </p>
             <p className="mb-10">
