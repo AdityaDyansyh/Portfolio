@@ -282,6 +282,49 @@ const projects: Project[] = [
     },
   },
   {
+    id: "saylor_python",
+    category: "Online Course Certificate",
+    title: "Introduction to Python - Saylor Academy",
+    src: "/assets/projects-screenshots/saylor_python.png",
+    screenshots: ["saylor_python"],
+    skills: {
+      frontend: [],
+      backend: [],
+    },
+    live: "",
+    github: "",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            Introduction to Python = Simplicity + Versatility + Productivity
+          </TypographyP>
+
+          <TypographyP className="font-mono">
+            Introduction to Python at Saylor Academy is your gateway to learning one of the
+            most popular and beginner-friendly programming languages — where you build
+            clear logic, write readable code, and solve real-world problems efficiently.
+            Strengthen your programming fundamentals, automate tasks, and develop a solid
+            problem-solving mindset with Python.
+          </TypographyP>
+
+          <TypographyH3 className="my-4 mt-8">What I Learned</TypographyH3>
+
+          <p className="font-mono mb-2">
+            Learned core Python concepts including variables, data types, control flow,
+            functions, lists, dictionaries, file handling, and basic problem-solving
+            techniques through structured coursework at Saylor Academy.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/saylor_python.png`,
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+  {
     id: "hubspot_revenue",
     category: "Professional Certification",
     title: "HubSpot Revenue Operations",
