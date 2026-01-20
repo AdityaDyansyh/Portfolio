@@ -267,6 +267,30 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     id: 2,
+    startDate: "January 2020",
+    endDate: "Dec 2025",
+    title: "C++ Programmer",
+    company: "TechSystems Inc.",
+    description: [
+      "Developed high-performance applications using modern C++ (C++17/20) with focus on efficiency and memory management",
+      "Implemented multithreaded solutions using std::thread and async programming, improving data processing speed by 50%",
+      "Designed and optimized algorithms and data structures for real-time systems handling 10K+ operations per second",
+      "Maintained and refactored legacy codebase, reducing memory leaks by 80% through smart pointers and RAII principles",
+      "Created cross-platform applications compatible with Windows, Linux, and macOS using CMake build system",
+      "Integrated third-party libraries including Boost, Qt, and OpenCV for enhanced application functionality",
+      "Conducted code reviews and implemented unit testing with Google Test achieving 85% code coverage",
+      "Collaborated with team using Git version control in Agile development environment"
+    ],
+    skills: [
+      SkillNames.MONGODB,
+      SkillNames.GIT,
+      SkillNames.GITHUB,
+      SkillNames.LINUX,
+      SkillNames.AWS,
+    ],
+  },
+  {
+    id: 3,
     startDate: "Apr 2022",
     endDate: "Dec 2024",
     title: "Freelance Developer",
