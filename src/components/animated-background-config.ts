@@ -17,20 +17,12 @@ export const STATES = {
     desktop: {
       scale: { x: 0.4, y: 0.4, z: 0.4 },
       position: { x: 0, y: -40, z: 0 },
-      rotation: {
-        x: 0,
-        y: Math.PI / 12,
-        z: 0,
-      },
+      rotation: { x: 0, y: Math.PI / 12, z: 0 },
     },
     mobile: {
-      scale: { x: 0.4, y: 0.4, z: 0.4 },
-      position: { x: 0, y: -40, z: 0 },
-      rotation: {
-        x: 0,
-        y: Math.PI / 6,
-        z: 0,
-      },
+      scale: { x: 0.3, y: 0.3, z: 0.3 }, // lebih kecil
+      position: { x: 0, y: -20, z: 0 }, // jangan sedalam desktop
+      rotation: { x: 0, y: Math.PI / 6, z: 0 },
     },
   },
   experience: {
