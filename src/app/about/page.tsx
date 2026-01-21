@@ -245,7 +245,7 @@ function Page() {
             <div className="flex flex-row lg:flex-col items-center">
               <div className="flex justify-center items-center lg:w-full bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-2xl lg:mb-5 p-6 lg:p-8">
                 <img
-                  className="rounded-full w-[140px] md:w-[170px] lg:w-[210px] aspect-square object-cover border-4 border-white/10 shadow-2xl"
+                  className="w-full h-full max-w-[210px] aspect-square object-cover rounded-xl border-4 border-white/10 shadow-2xl"
                   alt="me"
                   src="/assets/me.jpg"
                 />
@@ -294,11 +294,6 @@ function Page() {
             <p className="mb-10">
               My approach combines clean code architecture with performance optimization, whether I'm developing user-friendly interfaces or efficient backend systems.
               I thrive in solving complex problems and continuously learning new technologies to deliver robust solutions.
-            </p>
-            <p className="mb-10">
-              When I&apos;m not coding, you can find me [Your
-              Interests/Hobbies], exploring new technologies, or sipping coffee
-              while brainstorming my next project.
             </p>
             <h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
             <div className="mb-5">
@@ -362,7 +357,7 @@ function Page() {
               </Splide>
             </div> */}
           </div>
-        </main>
+        </div>
       </div>
     </div>
   );
