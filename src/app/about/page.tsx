@@ -209,7 +209,6 @@ const TOOLS = [
   {
     name: "Kubuntu",
     content: "Next.js is a React framework for production",
-    // give me correct color for  kubuntu
     icon: <SiKubuntu size={"50px"} color="#0077C4" />,
     color: "#000000",
   },
@@ -236,7 +235,6 @@ function Page() {
   return (
     <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12 pt-20 pb-20 text-zinc-300">
       <div className="flex flex-col lg:flex-row gap-8">
-
         {/* SIDEBAR */}
         <aside className="w-full lg:w-[320px] shrink-0">
           <div
@@ -260,6 +258,7 @@ function Page() {
               </div>
             </div>
 
+            {/* Kontak untuk Desktop */}
             <div className="hidden lg:block">
               <hr className="my-8 border-zinc-600" />
               <ul className="flex flex-col gap-3">
@@ -281,11 +280,45 @@ function Page() {
                 ))}
               </ul>
             </div>
+
+            {/* Kontak untuk Mobile (Carousel) */}
+            <div className="block lg:hidden mt-6">
+              <hr className="my-4 border-zinc-600" />
+              <Splide
+                options={{
+                  type: 'slide',
+                  perPage: 2,
+                  arrows: false,
+                  pagination: false,
+                  gap: '1rem',
+                  breakpoints: {
+                    640: { perPage: 3 },
+                  },
+                }}
+              >
+                {CONTACT_LINKS.map((link) => (
+                  <SplideSlide key={link.name}>
+                    <a
+                      className="flex flex-col items-center justify-center p-4 border-[.5px] border-zinc-600 rounded-md bg-zinc-800 hover:border-zinc-500"
+                      href={link.href}
+                    >
+                      <div className="w-8 h-8 flex items-center justify-center">
+                        {link.icon}
+                      </div>
+                      <div className="text-xs mt-2 text-center">{link.name}</div>
+                      <div className="text-xs text-zinc-500 text-center truncate w-full">
+                        {link.content}
+                      </div>
+                    </a>
+                  </SplideSlide>
+                ))}
+              </Splide>
+            </div>
           </div>
         </aside>
 
         {/* MAIN CONTENT */}
-        <main className="flex-1">
+        <main className="flex-1 min-w-0">
           <div
             className="p-6 md:p-8 lg:p-10 border-[.5px] rounded-2xl border-zinc-600 space-y-10"
             style={{ backdropFilter: "blur(2px)" }}
@@ -317,6 +350,11 @@ function Page() {
                     speed: 2000,
                     perPage: 5,
                     arrows: false,
+                    breakpoints: {
+                      1024: { perPage: 4 },
+                      768: { perPage: 3 },
+                      640: { perPage: 2 },
+                    },
                   }}
                 >
                   {TOOLS.map((tool) => (
@@ -334,7 +372,6 @@ function Page() {
       </div>
     </div>
   );
-
 }
 
 export default Page;
