@@ -49,8 +49,8 @@ const CONTACT_LINKS = [
   },
   {
     name: "Phone",
-    content: "1234567890",
-    href: "tel:1234567890",
+    content: "085651205251",
+    href: "tel:085651205251",
     icon: <FaPhone height={"50px"} />,
   },
   {
@@ -280,7 +280,7 @@ function Page() {
             </div>
           </div>
         </aside>
-        <main className="basis-3/4 w-[500px]">
+        <div className="container mx-auto px-4 pt-20 pb-20 min-h-screen">
           <div
             className="p-10 border-[.5px] rounded-md border-zinc-600"
             style={{ backdropFilter: "blur(2px)" }}
