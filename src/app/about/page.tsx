@@ -295,8 +295,8 @@ function Page() {
               My approach combines clean code architecture with performance optimization, whether I'm developing user-friendly interfaces or efficient backend systems.
               I thrive in solving complex problems and continuously learning new technologies to deliver robust solutions.
             </p>
-            <h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
-            <div className="mb-5">
+            <h1 className="text-3xl mt-16 mb-10">Stuff I use</h1>
+            <div className="mb-8 pt-6">
               {!toolsLoaded ? (
                 <p className="h-[100px]"></p>
               ) : (
@@ -328,34 +328,7 @@ function Page() {
                 </Splide>
               )}
             </div>
-            {/* <div className="">
-              <Splide
-                options={{
-                  type: "loop",
-                  interval: 2000,
-                  autoplay: true,
-                  pagination: false,
-                  speed: 3000,
-                  perPage: 5,
-                  perMove: 1,
-                  rewind: true,
-                  easing: "cubic-bezier(0.25, 1, 0.5, 1)",
-                  arrows: false,
-                }}
-                aria-label="My Favorite Images"
-              >
-                {TOOLS.map((tool) => (
-                  <SplideSlide key={tool.name}>
-                    <div
-                      key={tool.name}
-                      className="w-fit p-2 border-[.5px] border-zinc-600 rounded-md"
-                    >
-                      {tool.icon}
-                    </div>
-                  </SplideSlide>
-                ))}
-              </Splide>
-            </div> */}
+            {}
           </div>
         </div>
       </div>
