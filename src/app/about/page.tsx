@@ -232,24 +232,26 @@ function Page() {
   useEffect(() => {
     setToolsLoaded(true);
   }, []);
+
   return (
-    <div className="container mx-auto px-4 md:px-[50px] xl:px-[200px] text-zinc-300 pt-20 pb-20">
-      <div className="flex flex-col lg:flex-row gap-5">
-        <aside className="w-full md:basis-1/4">
+    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12 pt-20 pb-20 text-zinc-300">
+      <div className="flex flex-col lg:flex-row gap-8">
+
+        {/* SIDEBAR */}
+        <aside className="w-full lg:w-[320px] shrink-0">
           <div
-            className="p-4 md:p-8 lg:p-10 rounded-2xl border-[.5px] border-zinc-600"
-            style={{
-              backdropFilter: "blur(2px)",
-            }}
+            className="p-4 md:p-6 lg:p-8 rounded-2xl border-[.5px] border-zinc-600"
+            style={{ backdropFilter: "blur(2px)" }}
           >
             <div className="flex flex-row lg:flex-col items-center">
-              <div className="flex justify-center items-center lg:w-full bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-2xl lg:mb-5 p-6 lg:p-8">
+              <div className="flex justify-center items-center w-full bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-2xl mb-5 p-6">
                 <img
-                  className="w-full h-full max-w-[210px] aspect-square object-cover rounded-xl border-4 border-white/10 shadow-2xl"
+                  className="w-full max-w-[210px] aspect-square object-cover rounded-xl border-4 border-white/10 shadow-2xl"
                   alt="me"
                   src="/assets/me.jpg"
                 />
               </div>
+
               <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
                 <p className="text-center text-xl">Aditya Dyansyh</p>
                 <div className="text-xs bg-zinc-700 w-fit px-3 py-1 rounded-full">
@@ -257,13 +259,14 @@ function Page() {
                 </div>
               </div>
             </div>
+
             <div className="hidden lg:block">
-              <hr className="my-10 border-zinc-600" />
+              <hr className="my-8 border-zinc-600" />
               <ul className="flex flex-col gap-3">
                 {CONTACT_LINKS.map((link) => (
                   <li key={link.name}>
                     <a
-                      className="flex items-center px-3 gap-3 w-full h-12 border-zinc-700 bg-zinc-800 hover:border-zinc-600 border-[.5px] rounded-md "
+                      className="flex items-center px-3 gap-3 h-12 border-zinc-700 bg-zinc-800 hover:border-zinc-600 border-[.5px] rounded-md"
                       href={link.href}
                     >
                       <div className="w-8">{link.icon}</div>
@@ -280,25 +283,30 @@ function Page() {
             </div>
           </div>
         </aside>
-        <div className="container mx-auto px-4 pt-20 pb-20 min-h-screen">
+
+        {/* MAIN CONTENT */}
+        <main className="flex-1">
           <div
-            className="p-10 border-[.5px] rounded-md border-zinc-600"
+            className="p-6 md:p-8 lg:p-10 border-[.5px] rounded-2xl border-zinc-600 space-y-10"
             style={{ backdropFilter: "blur(2px)" }}
           >
-            <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
-            <p className="mb-10 text-roboto">
-              Hey there! I&apos;m Aditya, a passionate Full Stack Developer with strong expertise in modern web technologies and C++ systems programming.
-              With 2+ years of experience, I specialize in building scalable web applications using Next.js,
-              TypeScript, and cloud infrastructure, while also diving deep into high-performance C++ applications.
-            </p>
-            <p className="mb-10">
-              My approach combines clean code architecture with performance optimization, whether I'm developing user-friendly interfaces or efficient backend systems.
-              I thrive in solving complex problems and continuously learning new technologies to deliver robust solutions.
-            </p>
-            <h1 className="text-3xl mt-16 mb-10">Stuff I use</h1>
-            <div className="mb-8 pt-6">
+            <section>
+              <h1 className="text-3xl mb-6">About me</h1>
+              <p className="mb-6 leading-relaxed">
+                Hey there! I&apos;m Aditya, a passionate Full Stack Developer with strong expertise in modern web technologies and C++ systems programming.
+                With 2+ years of experience, I specialize in building scalable web applications using Next.js,
+                TypeScript, and cloud infrastructure, while also diving deep into high-performance C++ applications.
+              </p>
+              <p className="leading-relaxed">
+                My approach combines clean code architecture with performance optimization, whether I'm developing user-friendly interfaces or efficient backend systems.
+                I thrive in solving complex problems and continuously learning new technologies to deliver robust solutions.
+              </p>
+            </section>
+
+            <section>
+              <h1 className="text-3xl mb-6">Stuff I use</h1>
               {!toolsLoaded ? (
-                <p className="h-[100px]"></p>
+                <div className="h-[100px]" />
               ) : (
                 <Splide
                   options={{
@@ -308,32 +316,25 @@ function Page() {
                     pagination: false,
                     speed: 2000,
                     perPage: 5,
-                    perMove: 1,
-                    rewind: true,
-                    easing: "cubic-bezier(0.25, 1, 0.5, 1)",
                     arrows: false,
                   }}
-                  aria-label="My Favorite Images"
                 >
-                  {TOOLS.reverse().map((tool) => (
+                  {TOOLS.map((tool) => (
                     <SplideSlide key={tool.name}>
-                      <div
-                        key={tool.name}
-                        className="w-fit p-2 border-[.5px] border-zinc-600 rounded-md"
-                      >
+                      <div className="p-3 border-[.5px] border-zinc-600 rounded-md w-fit">
                         {tool.icon}
                       </div>
                     </SplideSlide>
                   ))}
                 </Splide>
               )}
-            </div>
-            {}
+            </section>
           </div>
-        </div>
+        </main>
       </div>
     </div>
   );
+
 }
 
 export default Page;
